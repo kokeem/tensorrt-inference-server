@@ -157,6 +157,8 @@ RUN python3 /workspace/onnxruntime/tools/ci_build/build.py --build_dir /workspac
             --use_cuda \
             --cuda_home /usr/local/cuda \
             --cudnn_home /usr/local/cudnn-$(echo $CUDNN_VERSION | cut -d. -f1-2)/cuda \
+            --use_tensorrt \
+            --tensorrt_home /usr/lib/x86_64-linux-gnu/ \
             --update \
             --build
 
