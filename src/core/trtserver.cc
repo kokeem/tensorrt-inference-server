@@ -1248,7 +1248,8 @@ TRTSERVER_ServerTraceConfigure(
   return nullptr;  // success
 }
 
- TRTSERVER_Error* TRTSERVER_ServerTraceSetLevel(
+TRTSERVER_Error*
+TRTSERVER_ServerTraceSetLevel(
     TRTSERVER_Server* server, uint32_t level, uint32_t rate)
 {
   ni::InferenceServer* lserver = reinterpret_cast<ni::InferenceServer*>(server);
