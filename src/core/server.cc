@@ -415,6 +415,13 @@ InferenceServer::SharedMemoryAddress(
       name, offset, byte_size, shm_mapped_addr);
 }
 
+Status
+InferenceServer::GetSharedMemoryStatus(
+    std::vector<SharedMemoryInfo*>* active_shm_regions)
+{
+  return shared_memory_manager_->GetSharedMemoryStatus(active_shm_regions);
+}
+
 uint64_t
 InferenceServer::UptimeNs() const
 {
